@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StayOnTrack</title>
+  <script type="module" crossorigin src="./assets/index-Cyakko5V.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Ddhxcg5y.css">
+</head>
+<body>
+    <header class="topbar">
+        <img class="logo" src="./assets/stay-on-track-logo-b0XmYjpf.svg" alt="StayOnTrack logo">
+        <div class="topbar-actions">
+            <button class="icon-button" id="editButton" aria-label="Edit">✎</button>
+            <button class="icon-button" id="addButton" aria-label="Add">+</button>
+        </div>
+    </header>
+
+    <main class="planner">
+        <section class="dates-section">
+            <h2>Dates</h2>
+            <div class="date-cards" id="dateCards"></div>
+        </section>
+
+        <section class="week-section">
+            <div class="week-nav">
+                <button id="previousWeek" aria-label="Previous week">&lt;</button>
+                <p id="weekLabel">Week</p>
+                <button id="nextWeek" aria-label="Next week">&gt;</button>
+            </div>
+
+            <div class="week-grid" id="weekGrid"></div>
+        </section>
+
+        <section class="bottom-section">
+            <div class="panel">
+                <h2>Daily check-ins</h2>
+                <div class="checkin-list" id="checkinList"></div>
+            </div>
+
+            <div class="panel">
+                <h2>Routines</h2>
+                <button class="plain-button" id="myRoutinesButton">My routines</button>
+                <div class="routine-list" id="routineList"></div>
+            </div>
+        </section>
+    </main>
+
+    <section class="form-panel hidden" id="formPanel">
+        <h2>What do you want to make?</h2>
+        <div class="type-buttons">
+            <button data-type="event">Event</button>
+            <button data-type="countdown">Countdown</button>
+            <button data-type="commitment">Commitment</button>
+            <button data-type="routine">Routine</button>
+        </div>
+
+        <form id="itemForm" class="hidden">
+            <label>
+                Name
+                <input id="itemTitle" type="text" required>
+            </label>
+            <label id="dateLabel">
+                Date
+                <input id="itemDate" type="date">
+            </label>
+            <label id="timeLabel">
+                Time
+                <input id="itemTime" type="time">
+            </label>
+            <label id="endDateLabel">
+                End-date
+                <input id="itemEndDate" type="date">
+            </label>
+            <label id="intervalLabel">
+                Interval
+                <select id="routineInterval">
+                    <option value="day">Every day</option>
+                    <option value="week" selected>Every week</option>
+                    <option value="month">Every month</option>
+                </select>
+            </label>
+            <label id="routineCountLabel">
+                How many times?
+                <input id="routineCount" type="number" min="1" max="31" value="3">
+            </label>
+            <button type="submit">Save</button>
+        </form>
+    </section>
+</body>
+</html>
