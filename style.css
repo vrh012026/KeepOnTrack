@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #e8e8e8;
+    background: #181818;
+}
+
+button {
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    transition: background 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.topbar,
+.planner {
+    border: 2px solid #3d3d3d;
+}
+
+.topbar {
+    position: relative;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    border-bottom: 0;
+}
+
+.topbar-actions {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+.logo {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 10px;
+}
+
+.icon-button {
+    width: 54px;
+    height: 32px;
+    margin-left: 8px;
+    border: 0;
+    background: #242424;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h2,
+p {
+    margin: 0;
+}
+
+h2 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dates-section,
+.panel,
+.day {
+    background: #242424;
+}
+
+.dates-section {
+    min-height: 190px;
+    padding: 8px;
+    border-bottom: 2px solid #333333;
+}
+
+.date-cards,
+.checkin-list,
+.routine-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card,
+.small-card,
+.routine,
+.mini-card {
+    padding: 8px;
+    background: #2e2e2e;
+    border: 1px solid #3d3d3d;
+}
+
+.card {
+    min-width: 150px;
+}
+
+.card strong,
+.card span {
+    display: block;
+}
+
+.card span {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.week-nav {
+    width: 130px;
+    display: grid;
+    grid-template-columns: 28px 1fr 28px;
+    border-right: 2px solid #3d3d3d;
+    border-bottom: 2px solid #3d3d3d;
+}
+
+.week-nav button {
+    border: 0;
+    background: #2a2a2a;
+}
+
+.week-nav p {
+    padding: 6px 0;
+    text-align: center;
+}
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    min-height: 280px;
+    border-right: 2px solid #3d3d3d;
+    border-bottom: 2px solid #3d3d3d;
+}
+
+.day:last-child {
+    border-right: 0;
+}
+
+.day-title {
+    min-height: 48px;
+    padding: 6px 4px;
+    background: #2e2e2e;
+    border-bottom: 2px solid #333333;
+}
+
+.mini-card {
+    margin: 6px;
+    font-size: 13px;
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.panel {
+    min-height: 210px;
+    padding: 0 8px 8px;
+}
+
+.panel:first-child {
+    border-right: 2px solid #3d3d3d;
+}
+
+.panel h2 {
+    margin: 0 -8px 8px;
+    padding-left: 2px;
+    background: #2e2e2e;
+}
+
+.small-card button {
+    display: block;
+    margin-top: 8px;
+    padding: 4px 10px;
+    border: 1px solid #3d3d3d;
+    background: #2a2a2a;
+}
+
+.plain-button {
+    margin-bottom: 8px;
+    padding: 6px 10px;
+    border: 1px solid #3d3d3d;
+    background: #2e2e2e;
+}
+
+.form-panel {
+    position: fixed;
+    top: 56px;
+    right: 16px;
+    width: 280px;
+    padding: 12px;
+    background: #2e2e2e;
+    border: 2px solid #3d3d3d;
+}
+
+.type-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.type-buttons button,
+.form-panel input,
+.form-panel select,
+.form-panel form button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #3d3d3d;
+    background: #2a2a2a;
+}
+
+.form-panel label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.form-panel input,
+.form-panel select {
+    margin-bottom: 8px;
+    background: #2e2e2e;
+}
+
+.delete-button {
+    display: block;
+    margin-top: 6px;
+    padding: 4px 6px;
+    border: 1px solid #3d3d3d;
+    background: #2a2a2a;
+    font-size: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .week-grid,
+    .bottom-section {
+        grid-template-columns: 1fr;
+    }
+
+    .day,
+    .panel:first-child {
+        border-right: 0;
+    }
+}
